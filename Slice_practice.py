@@ -6,26 +6,10 @@ from collections import Iterable
 def trim(s):
     if not isinstance(s,Iterable):
         raise TypeError('Error Input')
-    count = 0
-    if len(s) != 0:
-        while s[count] == " ":
-            if count == len(s)-1:
-                return ""
-            count = count + 1
-        begin = count
-        while s[count] != " ":
-            if count == len(s)-1:
-                count = count + 1
-                break
-            count = count + 1
-            sum = count
-        while sum != len(s)-1:
-            if s[sum] != " ":
-                count = sum
-                count = count + 1
-            sum = sum + 1
-        end = count
-        s = s[begin:end]
+    while s[:1] == " ":
+        s = s[1:]
+    while s[-1:] == " ":
+        s = s[:-1]
     return s
 
 if trim('hello  ') != 'hello':

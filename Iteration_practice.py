@@ -8,17 +8,13 @@ def findMinAndMax(L):
         raise TypeError("Error Input")
     if L == []:
         return (None,None)
-    elif len(L) == 1:
-        return (L[0],L[0])
     else:
         Min = L[0]
         Max = L[0]
-        count = 0
-        while count < len(L)-1 :
-            count = count + 1
-            if L[count] > Max:
+        for count in L:
+            if L[count] >= Max:
                 Max = L[count]
-            elif L[count] < Min:
+            elif L[count] <= Min:
                 Min = L[count]
             else:
                 pass
