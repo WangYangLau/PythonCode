@@ -1,4 +1,4 @@
-#!/usr/env/bin python3
+#!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 #功能：把Student的gender属性改造为枚举类型，可以避免使用字符串
 
